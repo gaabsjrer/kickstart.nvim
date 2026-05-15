@@ -147,6 +147,12 @@ vim.o.shiftwidth = 2
 vim.o.foldmethod = 'marker'
 vim.o.foldmarker = '<<<,>>>'
 
+vim.o.foldcolumn = '1'
+vim.opt.fillchars:append {
+  foldopen = '▶',
+  foldclose = '▼',
+}
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
@@ -283,7 +289,7 @@ require('lazy').setup({
         change = { text = '~' },
         delete = { text = '_' },
         topdelete = { text = '‾' },
-        changedelete = { text = '~' },
+        changedelete = { text = '-' },
       },
     },
   },
